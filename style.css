@@ -31,11 +31,21 @@ ul {
   margin: 0;
   list-style: none;
   margin: 8px 0;
+
 }
 
 li {
   font-size: 18px;
   padding: 10px;
+  font-weight: 300;
+  color: white;
+  opacity: 0.9;
+}
+
+li img {
+  height: 22px;
+  vertical-align: middle;
+
 }
 
 .spacer {
@@ -154,4 +164,32 @@ h2 {
 
 .shows img:hover {
   scale: 1.03;
+}
+
+.searchBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: transparent;
+  padding-top: 20px;
+  width: 100%;
+
+}
+
+
+.searchBar input {
+  width: 50%;
+  padding: 12px;
+  border: none;
+  background-color: #292929; /* Dark search bar background color */
+  color: #ffffff; /* Light text color */
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+  transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+}
+
+.searchBar input:focus {
+  background-color: #333; /* Darker background color on focus */
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3); /* White shadow on focus */
 }
