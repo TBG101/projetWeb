@@ -2,24 +2,35 @@
   margin: 0;
   padding: 0;
 }
+
 body {
   margin: 0;
   padding: 0;
   font-family: "Heebo", sans-serif, Arial;
   overflow-x: hidden;
+  background-color: rgb(66, 66, 66);
 }
+
 header {
+  position: absolute;
   display: flex;
+  top: 0;
   width: 100%;
   flex-direction: row;
+  z-index: 2;
+  background: linear-gradient(180deg, rgba(28, 29, 31, 0.664) 20%, rgba(28, 29, 31, 0) 100%);
+  font-weight: 400;
+  color: white;
+
 }
+
 ul {
   width: 100%;
-
   display: flex;
   padding: 0 10px;
   margin: 0;
   list-style: none;
+  margin: 8px 0;
 }
 
 li {
@@ -32,14 +43,23 @@ li {
 }
 
 .movieShowCaseContainer {
+  z-index: 1;
   position: relative;
+  box-shadow: 5px 0 10px 2px black;
+
+
 }
 
-.movieShowCase img {
+.movieShowCase {
   width: 100%;
-  height: 100%; /* Allow the image to take full height of the container */
-  width: auto; /* Let the width adjust automatically to maintain aspect ratio */
+  height: 100%;
+  /* Allow the image to take full height of the container */
+  width: auto;
+  /* Let the width adjust automatically to maintain aspect ratio */
   max-width: 100%;
+  vertical-align: bottom;
+
+
 }
 
 .logoTrailer {
@@ -61,9 +81,13 @@ li {
   flex-direction: row;
   justify-content: space-between;
 }
+
 .row {
+  display: flex;
+  flex-direction: row;
   width: 100%;
 }
+
 .logoTrailer .row .trailer,
 .logo {
   width: 25%;
@@ -73,17 +97,20 @@ li {
   align-items: center;
   text-align: center;
 }
+
 .column {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
+
 .batmanlogo {
   max-width: 80%;
   height: auto;
   /* add shadow with photoshop*/
 }
+
 .btn {
   margin-top: 10px;
   background-color: #f83c3c;
@@ -96,13 +123,35 @@ li {
   font-weight: 900;
   font-size: 32px;
 }
+
 .btn.trailerbtn {
   padding-right: 40px;
 }
+
 .trailer .column img {
   height: 100px;
   transform: translate(-43px, 5px);
 }
+
 h2 {
-  padding: 12px 35px;
+  padding: 12px 24px;
+  color: white;
+  font-weight: 500;
+}
+
+.shows {
+  padding: 0 10px;
+  padding-top: 10px;
+}
+
+.shows img {
+  height: 350px;
+  margin: 0 25px;
+  box-shadow: 0px 1px 15px 1px rgba(0, 0, 0, 0.75);
+  transition: scale 250ms ease;
+  border-radius: 5px;
+}
+
+.shows img:hover {
+  scale: 1.03;
 }
