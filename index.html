@@ -1,78 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;500&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <title>Home</title>
-  </head>
 
-  <body>
-    <header>
-      <ul>
-        <li style="font-weight: 500; opacity: 1">
-          <img src="assets/logo/logo.png" alt="" />
-        </li>
-        <li style="font-weight: 500; opacity: 1">Home</li>
-        <li>Cinema</li>
-        <li>Films</li>
-        <li class="spacer"></li>
-        <li style="font-weight: 500; opacity: 1">Sign in</li>
-      </ul>
-    </header>
-    <div class="movieShowCaseContainer">
-      <img src="assets/batman.jpg" alt="image" class="movieShowCase" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <script src="script.js"></script>
 
-      <div class="logoTrailer">
-        <div class="row">
-          <div class="logo">
-            <div class="column">
-              <img src="/assets/batmanLogo.png" alt="" class="batmanlogo" />
-              <div class="btn logobtn">BOOK YOUR TICKET</div>
-            </div>
+  <title>Watchly</title>
+</head>
+
+<body>
+  <header>
+    <ul>
+      <li>
+        <a href="index.html" style="margin-left: 0;"><img src="assets/logo/logo.png" alt=""
+            style="font-weight: 500; opacity: 1" /></a>
+      </li>
+      <li><a href="index.html" style="font-weight: 500; opacity: 1">Home</a></li>
+      <li><a href="pages/cinema.html">Cinema</a></li>
+      <li><a href="">Films</a></li>
+      <li class="spacer"></li>
+      <li style="font-weight: 500; opacity: 1">Sign in</li>
+    </ul>
+  </header>
+  <div class="movieShowCaseContainer">
+    <img src="assets/batman.jpg" alt="image" class="movieShowCase" />
+
+    <div class="logoTrailer">
+      <div class="row">
+        <div class="logo">
+          <div class="column">
+            <img src="/assets/batmanLogo.png" alt="" class="batmanlogo" />
+            <div class="btn logobtn">BOOK YOUR TICKET</div>
           </div>
-          <div class="trailer">
-            <div class="column">
-              <div
-                style="
-                  display: flex;
-                  flex-direction: row;
-                  align-items: center;
-                  justify-content: center;
-                "
-              >
-                <div class="btn trailerbtn">Watch Trailer</div>
-                <img src="/assets/play.png" alt="" />
-              </div>
+        </div>
+        <div class="trailer">
+          <div class="column">
+            <div class="btnContainerTrailer" onclick="playTrailer()">
+
+              <div class="btn trailerbtn">Watch Trailer</div>
+              <img src="/assets/play.png" alt="" />
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="searchBar">
-      <input type="text" />
+  </div>
+  <div class="searchBar">
+    <input type="text" placeholder="Search a movie" />
+  </div>
+
+  <div class="shows">
+    <h2>Currently in Watchly</h2>
+    <div class="row">
+      <img src="assets/movies/openheimer.webp" alt="" />
+      <img src="assets/movies/openheimer.webp" alt="" />
+      <img src="assets/movies/openheimer.webp" alt="" />
+      <img src="assets/movies/openheimer.webp" alt="" />
+      <img src="assets/movies/openheimer.webp" alt="" />
+      <img src="assets/movies/openheimer.webp" alt="" />
+      <img src="assets/movies/openheimer.webp" alt="" />
+      <img src="assets/movies/openheimer.webp" alt="" />
+      <img src="assets/movies/openheimer.webp" alt="" />
+      <img src="assets/movies/openheimer.webp" alt="" />
     </div>
-    <div class="shows">
-      <h2>Currently in Watchly</h2>
-      <div class="row">
-        <img src="assets/movies/openheimer.webp" alt="" />
-        <img src="assets/movies/openheimer.webp" alt="" />
-        <img src="assets/movies/openheimer.webp" alt="" />
-        <img src="assets/movies/openheimer.webp" alt="" />
-        <img src="assets/movies/openheimer.webp" alt="" />
-        <img src="assets/movies/openheimer.webp" alt="" />
-        <img src="assets/movies/openheimer.webp" alt="" />
-        <img src="assets/movies/openheimer.webp" alt="" />
-        <img src="assets/movies/openheimer.webp" alt="" />
-        <img src="assets/movies/openheimer.webp" alt="" />
-      </div>
-    </div>
-    <div style="height: 100px"></div>
-  </body>
+  </div>
+  <div style="height: 100px; color:white;font-weight: 100;opacity: 0.8;" class="column">
+    Watchly All rights reserved ®
+  </div>
+</body>
+
 </html>
