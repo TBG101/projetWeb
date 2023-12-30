@@ -1,5 +1,5 @@
 document.addEventListener("mousedown", handleClickOutside);
-
+var signIn = false;
 function playTrailer() {
   let newdiv =
     "<video controls autoplay> <source src='assets/mp4/THE BATMAN – Main Trailer.mp4'></video>";
@@ -38,6 +38,7 @@ function submitSignInBtn() {
 
   document.getElementsByName("form").forEach((item) => item.reset());
   document.body.style.overflowY = "visible";
+  signIn = true;
   return false;
 }
 
@@ -59,4 +60,32 @@ function clickedSignIn() {
   document.getElementsByClassName("signInContainer")[0].style.display = "flex";
   document.getElementsByClassName("signUpContainer")[0].style.display = "none";
   document.getElementsByName("form").forEach((item) => item.reset());
+}
+
+function movieSearchChange(val) {
+  let searchDiv = document.getElementById("searchedMovies");
+  console.log(val === "");
+  if (val === "") {
+    searchDiv.innerHTML = "";
+  } else {
+    searchDiv.innerHTML =
+      ' <div class="gridContainer"><div class="column">' +
+      '<img src="assets/movies/openheimer.webp" alt="" /><span>openheimer</span></div><div class="column"><img src="assets/movies/openheimer.webp" alt="" /><span>openheimer</span></div></div>';
+  }
+}
+
+function bookTicketSubmit() {
+  if (signIn == false) {
+    alert("USER NOT SIGNED IN!!");
+    return;
+  }
+  let inpoutValue = new Date(document.getElementById("TicketDate").value);
+  var today = new Date();
+
+  if (inpoutValue.getTime() < today.getTime()) {
+    alert("DATE ALREADY PASSED!!");
+    return;
+  }
+  alert("Congrats on buying a ticket");
+  window.location.href = "/index.html";
 }

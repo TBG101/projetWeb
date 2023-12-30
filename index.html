@@ -93,7 +93,7 @@
         <li>
           <a href="index.html" style="font-weight: 500; opacity: 1">Home</a>
         </li>
-        <li><a href="pages/packs.html">Packs</a></li>
+        <li><a href="packs.html">Packs</a></li>
         <li class="spacer"></li>
         <li
           style="font-weight: 500; opacity: 1; cursor: pointer"
@@ -112,14 +112,20 @@
           <div class="logo">
             <div class="column">
               <img src="/assets/batmanLogo.png" alt="" class="batmanlogo" />
-              <div class="btn logobtn">BOOK YOUR TICKET</div>
+              <div class="btn logobtn">
+                <a
+                  href="batmanPage.html"
+                  style="text-decoration: none; color: white"
+                  >BOOK YOUR TICKET</a
+                >
+              </div>
             </div>
           </div>
           <div class="trailer">
             <div class="column">
               <div class="btnContainerTrailer" onclick="playTrailer()">
                 <div class="btn trailerbtn">Watch Trailer</div>
-                <img src="/assets/play.png" alt="" />
+                <img src="/assets/play.png" alt="" style="cursor: pointer" />
               </div>
             </div>
           </div>
@@ -127,8 +133,15 @@
       </div>
     </div>
     <div class="searchBar">
-      <input type="text" placeholder="Search a movie" name="searchBar" />
+      <input
+        type="text"
+        placeholder="Search a movie"
+        name="searchBar"
+        onchange="movieSearchChange(this.value)"
+      />
     </div>
+
+    <div id="searchedMovies"></div>
     <hr style="margin-top: 20px" color="#808080" />
     <div class="shows">
       <h2>Currently in Watchly</h2>
