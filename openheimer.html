@@ -11,13 +11,9 @@
     />
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
-
     <title>Watchly</title>
   </head>
-
   <body>
-    <a id="scrollToTop" href="#" style="text-decoration: none;">↑</a>
-
     <div id="signIn">
       <div class="signInContainer">
         <div class="container">
@@ -82,7 +78,7 @@
         </div>
       </div>
     </div>
-    <header>
+    <header style="position: relative">
       <ul>
         <li>
           <a href="index.html" style="margin-left: 0"
@@ -106,83 +102,38 @@
         </li>
       </ul>
     </header>
-    <div class="movieShowCaseContainer">
-      <img src="assets/batman.jpg" alt="image" class="movieShowCase" />
 
-      <div class="logoTrailer">
-        <div class="row">
-          <div class="logo">
-            <div class="column">
-              <img src="/assets/batmanLogo.png" alt="" class="batmanlogo" />
-              <div class="btn logobtn">
-                <a
-                  href="TheBatman.html"
-                  style="text-decoration: none; color: white"
-                  >BOOK YOUR TICKET</a
-                >
-              </div>
-            </div>
-          </div>
-          <div class="trailer">
-            <div class="column">
-              <div class="btnContainerTrailer" onclick="playTrailer()">
-                <div class="btn trailerbtn">Watch Trailer</div>
-                <img src="/assets/play.png" alt="" style="cursor: pointer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="searchBar">
-      <input
-        type="text"
-        placeholder="Search a movie"
-        name="searchBar"
-        onchange="movieSearchChange(this.value)"
-      />
-    </div>
+    <div class="bookTicketContainer">
+      <form id="movieTicketBatman" onsubmit="bookTicketSubmit();return false;">
+        <fieldset>
+          <legend><h2>Openheimer movie:</h2></legend>
 
-    <div id="searchedMovies"></div>
-    <hr style="margin-top: 20px" color="#808080" />
-    <div class="shows">
-      <h2>Currently in Watchly</h2>
-      <div class="gridContainer">
-        <div class="column" onclick="window.location.href = '/openheimer.html'">
-          <img src="assets/movies/openheimer.webp" alt="" />
-          <span>openheimer</span>
-        </div>
-        <div class="column" onclick="window.location.href = '/openheimer.html'">
-          <img src="assets/movies/openheimer.webp" alt="" />
-          <span>openheimer</span>
-        </div>
-        <div class="column" onclick="window.location.href = '/openheimer.html'">
-          <img src="assets/movies/openheimer.webp" alt="" />
-          <span>openheimer</span>
-        </div>
-        <div class="column" onclick="window.location.href = '/openheimer.html'">
-          <img src="assets/movies/openheimer.webp" alt="" />
-          <span>openheimer</span>
-        </div>
-        <div class="column" onclick="window.location.href = '/openheimer.html'">
-          <img src="assets/movies/openheimer.webp" alt="" />
-          <span>openheimer</span>
-        </div>
-        <div class="column" onclick="window.location.href = '/openheimer.html'">
-          <img src="assets/movies/openheimer.webp" alt="" />
-          <span>openheimer</span>
-        </div>
-        <div class="column" onclick="window.location.href = '/openheimer.html'">
-          <img src="assets/movies/openheimer.webp" alt="" />
-          <span>openheimer</span>
-        </div>
-      </div>
+          <label for="ticketQuantity">Number of Tickets:</label>
+          <input type="number" id="ticketQuantity" min="1" value="1" />
+
+          <label for="ticketPack">Choose a Pack:</label>
+          <select id="ticketPack">
+            <option value="pack1">VIP Experience</option>
+            <option value="pack2">Family Fun Pack</option>
+            <option value="pack3">Double Feature Pack</option>
+          </select>
+          <label for="TicketDate">Select Date:</label>
+          <input
+            type="date"
+            id="TicketDate"
+            name="TicketDate"
+            min="2023-12-30"
+          />
+
+          <button type="submit">Book Ticket</button>
+        </fieldset>
+      </form>
+      <div id="bookingResult"></div>
     </div>
-    <div
-      style="height: 100px; color: white; font-weight: 100; opacity: 0.8"
-      class="column"
-    >
-      Watchly All rights reserved ®
-    </div>
+    <script>
+      let div = document.getElementById("TicketDate");
+      div.valueAsDate = new Date();
+      div.setAttribute("min", new Date());
+    </script>
   </body>
 </html>

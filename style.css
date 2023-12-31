@@ -454,3 +454,28 @@ input {
 
 
 }
+
+
+#scrollToTop {
+  display: block;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #303030;
+  color: #fff;
+  padding: 10px;
+  width: 30px;
+  height: 30px;
+  text-align: center;
+  border-radius: 180px;
+  cursor: pointer;
+  z-index: 99;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.678);
+  border-color: white;
+  border-width: 1px;
+  transition: all 250ms ease;
+}
+
+#scrollToTop:hover {
+  background-color: #1d1d1d;
+}
