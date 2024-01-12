@@ -82,11 +82,10 @@ function bookTicketSubmit() {
   let inpoutValue = new Date(document.getElementById("TicketDate").value);
   var today = new Date();
 
-  if (inpoutValue.getTime() < today.get()) {
+  if (inpoutValue.getTime() < today.getTime()) {
     alert("DATE ALREADY PASSED!!");
     return;
   }
   alert("Congrats on buying a ticket");
   window.location.href = "/index.html";
 }
-
