@@ -178,6 +178,14 @@ h2 {
   padding-top: 10px;
 }
 
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
+
 .gridContainer>div {
   cursor: pointer;
   width: min-content;
@@ -193,13 +201,6 @@ h2 {
 
 }
 
-.gridContainer {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  justify-items: center;
-}
 
 .gridContainer>div>img {
   height: 350px;
@@ -307,7 +308,6 @@ td {
   width: 100%;
   height: 100%;
   z-index: 99;
-
 }
 
 .signInContainer,
@@ -462,7 +462,7 @@ input {
   bottom: 20px;
   right: 20px;
   background-color: #303030;
-  color: #fff;
+  color: #ffffff;
   padding: 10px;
   width: 30px;
   height: 30px;
