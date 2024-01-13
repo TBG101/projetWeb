@@ -1,4 +1,13 @@
 document.addEventListener("mousedown", handleClickOutside);
+function handleClickOutside(event) {
+  let signDiv = document.getElementById("signIn");
+  if (event.target == signDiv) {
+    signDiv.style.display = "none";
+    document.body.style.overflowY = "visible";
+    clickedSignIn();
+  }
+}
+
 var signIn = false;
 function playTrailer() {
   let newdiv =
@@ -39,16 +48,6 @@ function submitSignInBtn() {
   document.getElementsByName("form").forEach((item) => item.reset());
   document.body.style.overflowY = "visible";
   signIn = true;
-  return false;
-}
-
-function handleClickOutside(event) {
-  let signDiv = document.getElementById("signIn");
-  if (event.target == signDiv) {
-    signDiv.style.display = "none";
-    document.body.style.overflowY = "visible";
-    clickedSignIn();
-  }
 }
 
 function clickedSignUp() {

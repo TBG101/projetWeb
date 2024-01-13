@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=7, initial-scale=1.0" />
+    <script src="admin.js"></script>
+
+    <title>Watchly ADMIN</title>
+  </head>
+  <body>
+    <script>
+      checkValue = admingLogin();
+      if (checkValue === false)
+        document.write("<center>NOT AN ADMIN </center>");
+      else document.write("<center>ADMIN</center>");
+    </script>
+  </body>
+</html>
